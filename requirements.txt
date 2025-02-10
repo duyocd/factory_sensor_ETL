@@ -1,0 +1,8 @@
+threading
+numpy
+pandas
+conluent-kafka
+base64
+itertools
+python-dotenv
+logging
