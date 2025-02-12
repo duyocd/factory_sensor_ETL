@@ -24,8 +24,8 @@ REDIS_CONFIG = {
 
 # Topic configuration
 TOPICS = {
-    'raw_data': 'topic-org',
-    'mapped_data': 'topic-std'
+    'raw_data': 'ooo', # your first topic
+    'mapped_data': 'sss' # your second topic 
 }
 
 # Sample data configuration
