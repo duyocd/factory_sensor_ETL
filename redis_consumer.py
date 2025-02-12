@@ -15,6 +15,7 @@ class RedisConsumer:
         
         consumer_config = kafka_config.copy()
         consumer_config['group.id'] = 'redis-group'
+        consumer_config['auto.offset.reset'] = 'earliest'
         self.consumer = Consumer(consumer_config)
         self.consumer.subscribe([topic])
         self.expire_time = redis_config.get('expire_time', 86400)  # Default 1 day
