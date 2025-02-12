@@ -11,7 +11,7 @@ class DataMapper:
     def __init__(self, kafka_config: Dict[str, Any], input_topic: str, output_topic: str):
         consumer_config = kafka_config.copy()
         consumer_config['group.id'] = 'mapping-group'
-        
+        consumer_config['auto.offset.reset'] = 'earliest'
         self.consumer = Consumer(consumer_config)
         self.producer = Producer(kafka_config)
         self.input_topic = input_topic
